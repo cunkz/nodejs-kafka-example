@@ -9,6 +9,9 @@ const config = {
   topic: {
     default: process.env.KAFKA_TOPIC_DEFAULT,
   },
+  groupId: {
+    default: process.env.KAFKA_GROUP_ID_DEFAULT,
+  },
   sasl: { 
       mechanism: 'plain', 
       username: process.env.KAFKA_SASL_USERNAME,
