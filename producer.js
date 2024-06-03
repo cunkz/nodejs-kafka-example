@@ -1,5 +1,7 @@
 const kafka = require('kafka-node');
 const config = require('./config');
+if(!config.isEnable.sasl) delete config['sasl'];
+if(!config.isEnable.sslOptions) delete config['sslOptions'];
 const client = new kafka.KafkaClient(config);
 const producer = new kafka.HighLevelProducer(client);
 
